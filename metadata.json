@@ -1,0 +1,6 @@
+{
+  "name": "MY LOVE Gallery & Persistent Video Player",
+  "description": "Romantic love gallery, sweet memories timeline, interactive games, and persistent video player that saves videos across page reloads via IndexedDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

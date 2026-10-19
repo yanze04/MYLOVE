@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --bg-gradient: radial-gradient(circle at 20% 0%, #2a0018 0%, #14000c 45%, #0a0007 100%);
+  --border-pink: rgba(255, 105, 180, 0.25);
+  --shadow-romantic: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --accent-pink: #ff69b4;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.font-romantic {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Custom romantic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0007;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 105, 180, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 180, 0.6);
+}
+
+/* Glassmorphism styling */
+.romantic-card {
+  background: #150009;
+  border: 1px solid var(--border-pink);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 105, 180, 0.05);
+}
+
+.romantic-glow {
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.25), inset 0 0 15px rgba(255, 105, 180, 0.1);
+}
+
+/* Pulse animation for floating hearts */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatUp 12s linear infinite;
+}
